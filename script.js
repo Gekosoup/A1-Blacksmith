@@ -5,9 +5,6 @@
 // 1. Select the forge, heat, sword count, status, image, and message elements.
 //    Find their IDs in index.html.
 
-// Assignment 1: Blacksmith — The Tiny Forge
-
-
 // ------------------------------------
 // 1. SELECT THE HTML ELEMENTS
 // ------------------------------------
@@ -31,6 +28,17 @@ const $forgeImage = document.getElementById('forge-image')
 const $actionMessage = document.getElementById('action-message')
 
 // 2. Create the two state variables: heat and swords made.
+
+// ------------------------------------
+// 2. CREATE THE STATE VARIABLES
+// ------------------------------------
+
+// Starting heat is 20
+let heat = 20
+
+// Starting number of swords is 0
+let swords = 0
+
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 
