@@ -39,8 +39,17 @@ let heat = 20
 // Starting number of swords is 0
 let swords = 0
 
-
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
+
+// ------------------------------------
+// 3. GET FORGE STATUS
+// ------------------------------------
+
+// This function checks the amount of heat
+// and returns the correct status
+function getForgeStatus(heatValue) {
+
+}
 
 // 4. Write updateForge(). Update text and apply one status class.
 //    Change the supplied forge image src and alt to match the heat.
