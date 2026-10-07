@@ -155,9 +155,27 @@ function resetForge() {
   updateForge()
 }
 
-
-
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
+
+// This function adds heat to the forge
+function heatForge(amount) {
+
+  // Add the requested amount of heat
+  heat += amount
+
+  // Make sure heat never goes above 100
+  if (heat > 100) {
+    heat = 100
+  }
+
+  // Update the message
+  $actionMessage.textContent =
+    `You added ${amount} heat.`
+
+  // Update the page
+  updateForge()
+}
+
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
 
