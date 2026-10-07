@@ -81,7 +81,7 @@ function updateForge() {
 
   // Update the status text
   $forgeStatus.textContent = status
-
+}
 
 // 5. Write resetForge(). Restore the state, message, and display.
 
