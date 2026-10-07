@@ -81,9 +81,62 @@ function updateForge() {
 
   // Update the status text
   $forgeStatus.textContent = status
+
+  // --------------------------------
+  // Change the forge class
+  // --------------------------------
+
+  // Remove the old status classes
+  $forge.classList.remove('is-cold')
+  $forge.classList.remove('is-ready')
+  $forge.classList.remove('is-roaring')
+
+
+  // --------------------------------
+  // Change the image
+  // --------------------------------
+
+  if (heat < 30) {
+
+    // Add the cold class
+    $forge.classList.add('is-cold')
+
+    // Change the image
+    $forgeImage.src = 'assets/forge-cold.svg'
+
+    // Change the image description
+    $forgeImage.alt = 'A stone forge with dark coals and no flames'
+
+  } 
+  
+  else if (heat < 70) {
+    // Add the ready class
+    $forge.classList.add('is-ready')
+
+    // Change the image
+    $forgeImage.src = 'assets/forge-ready.svg'
+
+    // Change the image description
+    $forgeImage.alt = 'A stone forge with glowing coals and a small flame'
+
+  } 
+  
+  else {
+
+    // Add the roaring class
+    $forge.classList.add('is-roaring')
+
+    // Change the image
+    $forgeImage.src = 'assets/forge-roaring.svg'
+
+    // Change the image description
+    $forgeImage.alt = 'A stone forge with bright glowing coals and roaring flames'
+  }
 }
 
+
 // 5. Write resetForge(). Restore the state, message, and display.
+
 
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
 
