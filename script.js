@@ -48,7 +48,18 @@ let swords = 0
 // This function checks the amount of heat
 // and returns the correct status
 function getForgeStatus(heatValue) {
+  // 0–29 = Too cold
+  if (heatValue < 30) {
+    return 'Too cold'
+  }
 
+  // 30–69 = Ready to forge
+  if (heatValue < 70) {
+    return 'Ready to forge'
+  }
+
+  // 70–100 = Roaring fire
+  return 'Roaring fire. Keep crafting!'
 }
 
 // 4. Write updateForge(). Update text and apply one status class.
