@@ -179,6 +179,33 @@ function heatForge(amount) {
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
 
+// This function attempts to make one sword
+function makeSword() {
+
+  // A sword requires 30 heat
+  if (heat >= 30) {
+
+    // Use 30 heat
+    heat -= 30
+
+    // Add one sword
+    swords++
+
+    // Show success message
+    $actionMessage.textContent =
+      'Sword crafted! The blade is ready.'
+
+  } else {
+
+    // Not enough heat
+    $actionMessage.textContent =
+      'Not enough heat. Add more heat to forge a sword.'
+  }
+
+  // Update the page
+  updateForge()
+}
+
 // 8. Call resetForge() once to start the game.
 
 // Use the tests in ASSIGNMENT.md to check your work.
