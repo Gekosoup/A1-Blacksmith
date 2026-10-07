@@ -66,6 +66,23 @@ function getForgeStatus(heatValue) {
 //    Change the supplied forge image src and alt to match the heat.
 //    Keep the most recent action message visible.
 
+// This function updates everything on the page
+// whenever the forge state changes
+function updateForge() {
+
+  // Update the heat number
+  $heatValue.textContent = heat
+
+  // Update the number of swords
+  $swordCount.textContent = swords
+
+  // Get the current forge status
+  const status = getForgeStatus(heat)
+
+  // Update the status text
+  $forgeStatus.textContent = status
+
+
 // 5. Write resetForge(). Restore the state, message, and display.
 
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
