@@ -137,6 +137,25 @@ function updateForge() {
 
 // 5. Write resetForge(). Restore the state, message, and display.
 
+// This function returns the forge
+// to its starting state
+function resetForge() {
+
+  // Reset heat to 20
+  heat = 20
+
+  // Reset swords to 0
+  swords = 0
+
+  // Show the starting message
+  $actionMessage.textContent =
+    'Welcome to the forge. Add heat to begin.'
+
+  // Update everything on the page
+  updateForge()
+}
+
+
 
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
 
