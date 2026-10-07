@@ -208,4 +208,11 @@ function makeSword() {
 
 // 8. Call resetForge() once to start the game.
 
+// ------------------------------------
+// 8. START THE GAME
+// ------------------------------------
+
+// Set the forge to its starting state
+resetForge()
+
 // Use the tests in ASSIGNMENT.md to check your work.
